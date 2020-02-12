@@ -1,0 +1,9 @@
+body {
+    background-color: darkslategrey;
+}
+
+.content {
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
