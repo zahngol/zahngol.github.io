@@ -1,11 +1,22 @@
 function generate()
 {
-    let result = getRandomInt(0,10);
+    let result = getRandomChar(true, true);
     document.getElementById("content").innerHTML = result.toString();
 }
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-  }
+function getRandomChar(alpha, number)
+{
+    var characters = '';
+    if (alpha)
+    {
+        characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    }
+
+    if (number)
+    {
+        characters += '1234567890';
+    }
+
+    var index = Math.floor(Math.random() * characters.length);
+    return characters.charAt(index);
+}
